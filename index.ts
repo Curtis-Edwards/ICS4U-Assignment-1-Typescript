@@ -25,27 +25,27 @@ function rockPaperScissor(userInputString) {
     output = "You tied."
   } else {
     switch (computerChoice) {
-      case "rock":
-        if (userInputString == "scissors") {
-          output = "You lost..."
-        } else {
-          output = "You won!"
-        }
-        break
-      case "paper":
-        if (userInputString == "rock") {
-          output = "You lost..."
-        } else {
-          output = "You won!"
-        }
-        break
-      case "scissors":
-        if (userInputString == "paper") {
-          output = "You lost..."
-        } else {
-          output = "You won!"
-        }
-        break
+    case "rock":
+      if (userInputString == "scissors") {
+        output = "You lost..."
+      } else {
+        output = "You won!"
+      }
+      break
+    case "paper":
+      if (userInputString == "rock") {
+        output = "You lost..."
+      } else {
+        output = "You won!"
+      }
+      break
+    case "scissors":
+      if (userInputString == "paper") {
+        output = "You lost..."
+      } else {
+        output = "You won!"
+      }
+      break
     }
   }
   return output
