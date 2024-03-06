@@ -9,7 +9,7 @@
 
 import { createPrompt } from 'bun-promptx'
 
-function rockPaperScissor(userInputLower: string) {
+function rockPaperScissor(userInputString: string) {
   // this function simulates a game of "rock-paper-scissors"
 
   // computer chooses rock, paper, or scissors
@@ -19,28 +19,28 @@ function rockPaperScissor(userInputLower: string) {
   let output = ""
 
   // process
-  console.log(`You choose: ${userInputLower}`)
+  console.log(`You choose: ${userInputString}`)
   console.log(`The computer choose: ${computerChoice}`)
-  if (userInputLower == computerChoice) {
+  if (userInputString == computerChoice) {
     output = "You tied."
   } else {
     switch (computerChoice) {
       case "rock":
-        if (userInputLower == "scissors") {
+        if (userInputString == "scissors") {
           output = "You lost..."
         } else {
           output = "You won!"
         }
         break
       case "paper":
-        if (userInputLower == "rock") {
+        if (userInputString == "rock") {
           output = "You lost..."
         } else {
           output = "You won!"
         }
         break
       case "scissors":
-        if (userInputLower == "paper") {
+        if (userInputString == "paper") {
           output = "You lost..."
         } else {
           output = "You won!"
@@ -52,16 +52,15 @@ function rockPaperScissor(userInputLower: string) {
 }
 
 // input
-const userInput = createPrompt("rock, paper, or scissors?: ")
+const userInput = createPrompt("rock, paper, or scissors?(lowercase): ")
 const userInputString = userInput.value
-const userInputLower = userInput.toLowerCase()
 
 // error check
-if (userInputLower == "rock" ||
-   userInputLower == "paper" ||
-   userInputLower == "scissors"
+if (userInputString == "rock" ||
+   userInputString == "paper" ||
+   userInputString == "scissors"
 ) {
-  let output = rockPaperScissor(userInputLower)
+  let output = rockPaperScissor(userInputString)
   console.log(output)
 } else {
   console.log(`Invalid input.`)
