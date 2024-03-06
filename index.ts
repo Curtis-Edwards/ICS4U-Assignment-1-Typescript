@@ -53,7 +53,7 @@ function rockPaperScissor(userInputLower: string) {
 
 // input
 const userInput = createPrompt("rock, paper, or scissors?: ")
-const userInputString = userInputLower.value
+const userInputString = userInput.value
 const userInputLower = userInput.toLowerCase()
 
 // error check
