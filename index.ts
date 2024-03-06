@@ -9,7 +9,7 @@
 
 import { createPrompt } from 'bun-promptx'
 
-function rockPaperScissor(userInputString: string) {
+function rockPaperScissor(userInputString) {
   // this function simulates a game of "rock-paper-scissors"
 
   // computer chooses rock, paper, or scissors
