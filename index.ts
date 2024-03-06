@@ -13,7 +13,7 @@ function rockPaperScissor(userInputString) {
   // this function simulates a game of "rock-paper-scissors"
 
   // computer chooses rock, paper, or scissors
-  const computerOptions: string[] = ["rock", "paper", "scissors"]
+  const computerOptions = ["rock", "paper", "scissors"]
   const computerChoice = computerOptions[Math.floor(Math.random() * 3)]
 
   let output = ""
